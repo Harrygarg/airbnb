@@ -18,7 +18,7 @@ let app = express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://air-2mdg.onrender.com",
     credentials:true
 }))
 
@@ -31,4 +31,5 @@ app.use("/api/booking",bookingRouter )
 app.listen(port,()=>{
     connectDb()
     console.log("server started")
+
 })
